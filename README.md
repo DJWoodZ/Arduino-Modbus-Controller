@@ -1,6 +1,6 @@
 # Arduino Modbus Controller
 
-A web-based interface enables to control the 12x8 LED matrix on an Arduino UNO R4 using the Modbus RTU protocol. This controller leverages the Web Serial API.
+A web-based interface that enables you to control the 12x8 LED matrix on an Arduino UNO R4 using the Modbus RTU protocol. This controller leverages the Web Serial API.
 
 ## 💿 Install
 
