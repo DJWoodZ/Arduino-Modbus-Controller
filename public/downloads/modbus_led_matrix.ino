@@ -29,7 +29,13 @@
  * Dependencies:
  *   ModbusRTUSlave by C. M. Bulliner: https://github.com/CMB27/ModbusRTUSlave
  *
- * Arduino Modbus Controller Firmware v1.0 (8 June 2025)
+ * Arduino Modbus Controller Firmware v1.1 (8 June 2025)
+ * 
+ * v1.1 (8 June 2025):
+ * - Removed unused coils array
+ * 
+ * v1.0 (8 June 2025):
+ * - Initial release
  */
 
 #include "Arduino_LED_Matrix.h"
@@ -38,8 +44,6 @@
 ModbusRTUSlave modbus(Serial);
 ModbusRTUSlave modbus1(Serial1);
 ArduinoLEDMatrix matrix;
-
-bool coils[1];
 
 #define ROWS 12
 #define COLS 8
