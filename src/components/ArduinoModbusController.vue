@@ -1,5 +1,5 @@
 <template>
-  <v-container v-if="$api.isSupported">
+  <v-container v-if="$api.isSupported()">
     <v-row dense justify="center">
       <v-col
         class="pa-2"
@@ -206,7 +206,7 @@
   </v-container>
 
   <v-alert v-else density="compact" type="error" variant="outlined">Sorry, your browser does not support the Web Serial API. Please use a
-    <a class="text-decoration-none" href="https://caniuse.com/web-serial" rel="noopener noreferrer" target="_blank">compatible browser</a>.</v-alert>
+    <a class="text-decoration-none font-weight-bold text-error" href="https://caniuse.com/web-serial" rel="noopener noreferrer" target="_blank">compatible browser</a>.</v-alert>
 
 </template>
 
