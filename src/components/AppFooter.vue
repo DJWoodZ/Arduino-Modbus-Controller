@@ -20,7 +20,7 @@
 
     <span
       class="text-caption text-disabled user-select-none"
-      :class="{ 'absolute-text': mdAndUp }"
+      :class="{ 'absolute-center-text': mdAndUp }"
     >Build: <a
       :href="`https://github.com/DJWoodZ/Arduino-Modbus-Controller/commit/${build}`"
       rel="noopener noreferrer"
@@ -111,7 +111,7 @@
   }
 }
 
-.absolute-text {
+.absolute-center-text {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
