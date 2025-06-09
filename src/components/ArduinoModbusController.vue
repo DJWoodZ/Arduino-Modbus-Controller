@@ -150,7 +150,7 @@
               aria-label="Write current state"
               color="grey-darken-1"
               :disabled="!connected"
-              prepend-icon="mdi-download"
+              prepend-icon="mdi-upload"
               title="Write current state"
               @click="writeLEDValues"
             >
