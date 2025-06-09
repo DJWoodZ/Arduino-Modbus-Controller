@@ -7,7 +7,7 @@
           xl="2"
         >
           <v-card
-            class="padded-paragraphs pa-3 mb-2"
+            class="padded-paragraphs pa-3"
             rounded="lg"
             title="Welcome"
             variant="tonal"
@@ -86,7 +86,7 @@
           </v-card>
 
           <v-card
-            class="padded-paragraphs pa-3 mb-2"
+            class="padded-paragraphs pa-3"
             rounded="lg"
             title="Connection"
             variant="tonal"
