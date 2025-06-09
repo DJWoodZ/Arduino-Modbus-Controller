@@ -15,12 +15,10 @@
             <v-card-text>
 
               <p>This web-based interface enables you to control the 12x8 LED matrix on an <a
-                class="text-decoration-none font-weight-bold on-surface"
                 href="https://store.arduino.cc/pages/uno-r4"
                 rel="noopener noreferrer"
                 target="_blank"
               >Arduino UNO R4</a> using the Modbus RTU protocol. This controller leverages the <a
-                class="text-decoration-none font-weight-bold on-surface"
                 href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -29,17 +27,14 @@
               <v-img alt="Arduino UNO R4" max-height="200px" src="/images/uno-r4.svg" />
 
               <p class="text-center text-caption"><a
-                class="text-decoration-none font-weight-bold on-surface"
                 href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
                 rel="noopener noreferrer"
                 target="_blank"
               >Arduino Uno R4 Board</a> by <a
-                class="text-decoration-none font-weight-bold on-surface"
                 href="https://docs.arduino.cc/"
                 rel="noopener noreferrer"
                 target="_blank"
               >Arduino</a> is licensed under <a
-                class="text-decoration-none font-weight-bold on-surface"
                 href="https://creativecommons.org/licenses/by-sa/4.0/"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -101,7 +96,7 @@
 
               <p>Alternatively, you may use the onboard UART (pins D0 and D1), for example, with a TTL to RS-485 converter and a USB RS-485 device.</p>
 
-              <p>Uncheck 'Arduino Devices Only' to see all serial ports .</p>
+              <p>Uncheck 'Arduino Devices Only' to see all serial ports.</p>
             </v-card-text>
           </v-card>
         </v-col>

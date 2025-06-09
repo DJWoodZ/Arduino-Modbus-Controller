@@ -18,6 +18,15 @@
       />
     </a>
 
+    <span
+      class="text-caption text-disabled user-select-none"
+      style="position: absolute; left: 50%; transform: translate(-50%, 0);"
+    >Build: <a
+      :href="`https://github.com/DJWoodZ/Arduino-Modbus-Controller/commit/${build}`"
+      rel="noopener noreferrer"
+      target="_blank"
+    >{{ build }}</a></span>
+
     <div
       class="text-caption text-disabled user-select-none"
       style="position: absolute; right: 16px;"
@@ -42,13 +51,10 @@
 
             <v-card-text>
               <p>The source code for this Modbus controller and the associated Arduino firmware are made available under the terms of the <a
-                class="text-decoration-none font-weight-bold on-surface"
-                href="https://opensource.org/license/mit/"
+                href="https://github.com/DJWoodZ/Arduino-Modbus-Controller/blob/main/LICENSE"
                 rel="noopener noreferrer"
                 target="_blank"
-              >
-                MIT License
-              </a>.</p>
+              >MIT License</a>.</p>
             </v-card-text>
 
             <v-card-actions>
@@ -67,8 +73,7 @@
       &copy; {{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">DJ WoodZ</span>
       —
       <a
-        class="text-decoration-none on-surface"
-        href="https://opensource.org/license/mit/"
+        href="https://github.com/DJWoodZ/Arduino-Modbus-Controller/blob/main/LICENSE"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -87,14 +92,18 @@
       size: 24,
     },
   ]
+
+  const build = __COMMIT_HASH__ ;
 </script>
 
-<style scoped lang="sass">
-  :deep(.v-icon)
-    color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity))
-    text-decoration: none
-    transition: .2s ease-in-out
+<style scoped lang="scss">
+:deep(.v-icon), .v-footer a  {
+  color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity));
+  text-decoration: none;
+  transition: .2s ease-in-out;
 
-    &:hover
-      color: rgb(var(--v-theme-primary))
+  &:hover {
+    color: rgb(var(--v-theme-primary));
+  }
+}
 </style>

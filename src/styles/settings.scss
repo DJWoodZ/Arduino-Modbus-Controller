@@ -12,3 +12,14 @@
 .user-select-none {
   user-select: none;
 }
+
+a {
+  color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  font-weight: bold;
+
+  &:hover {
+    color: rgb(var(--v-theme-primary));
+  }
+}
