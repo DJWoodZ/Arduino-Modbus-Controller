@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
- /*
+/*
  * Arduino Modbus Controller Firmware by DJ WoodZ
  *
  * This code accompanies the Arduino Modbus Controller:
