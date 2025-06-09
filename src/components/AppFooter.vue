@@ -20,7 +20,7 @@
 
     <span
       class="text-caption text-disabled user-select-none"
-      style="position: absolute; left: 50%; transform: translate(-50%, 0);"
+      :class="{ 'absolute-text': mdAndUp }"
     >Build: <a
       :href="`https://github.com/DJWoodZ/Arduino-Modbus-Controller/commit/${build}`"
       rel="noopener noreferrer"
@@ -84,6 +84,10 @@
 </template>
 
 <script setup>
+  import { useDisplay } from 'vuetify';
+
+  const { mdAndUp } = useDisplay()
+
   const items = [
     {
       title: 'GitHub',
@@ -105,5 +109,11 @@
   &:hover {
     color: rgb(var(--v-theme-primary));
   }
+}
+
+.absolute-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 </style>
