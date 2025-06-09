@@ -2,6 +2,11 @@
 
 A web-based interface that enables you to control the 12x8 LED matrix on an Arduino UNO R4 using the Modbus RTU protocol. This controller leverages the Web Serial API.
 
+| Light Theme | Dark Theme |
+| --- | --- |
+| [![Arduino Modbus Controller - Light Theme](./screenshots/light-theme.png)](./screenshots/light-theme.png) | [![Arduino Modbus Controller - Dark Theme](./screenshots/dark-theme.png)](./screenshots/dark-theme.png) |
+
+
 ## 💿 Install
 
 Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
@@ -38,6 +43,6 @@ npm run build
 
 ## 📑 License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://github.com/DJWoodZ/Arduino-Modbus-Controller/blob/main/LICENSE)
 
 Copyright (c) 2025 DJ WoodZ
