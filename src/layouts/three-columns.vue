@@ -24,7 +24,49 @@
                 target="_blank"
               >Web Serial API</a>.</p>
 
-              <v-img alt="Arduino UNO R4" max-height="200px" src="/images/uno-r4.svg" />
+
+              <v-dialog max-width="400" min-height="140" scrollable>
+                <template #activator="{ props: activatorProps }">
+                  <v-img
+                    v-bind="activatorProps"
+                    alt="Arduino UNO R4"
+                    max-height="200px"
+                    src="/images/uno-r4.svg"
+                    style="cursor: pointer;"
+                  />
+
+                </template>
+
+                <template #default="{ isActive }">
+                  <v-card title="Arduino UNO R4 Board">
+                    <v-card-text class="text-center text-caption">
+                      <v-img v-bind="activatorProps" alt="Arduino UNO R4" max-height="400px" src="/images/uno-r4.svg" />
+                      <p><a
+                        href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >Arduino Uno R4 Board</a> by <a
+                        href="https://docs.arduino.cc/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >Arduino</a> is licensed under <a
+                        href="https://creativecommons.org/licenses/by-sa/4.0/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >CC-BY-SA 4.0</a>.</p>
+                    </v-card-text>
+
+                    <template #actions>
+                      <v-btn
+                        class="ml-auto"
+                        text="Close"
+                        @click="isActive.value = false"
+                      />
+                    </template>
+                  </v-card>
+                </template>
+              </v-dialog>
+
 
               <p class="text-center text-caption"><a
                 href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
