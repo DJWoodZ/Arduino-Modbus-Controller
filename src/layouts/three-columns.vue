@@ -18,7 +18,7 @@
                 href="https://store.arduino.cc/pages/uno-r4"
                 rel="noopener noreferrer"
                 target="_blank"
-              >Arduino UNO R4</a> using the Modbus RTU protocol. This controller leverages the <a
+              >Arduino UNO R4 WiFi</a> using the Modbus RTU protocol. This controller leverages the <a
                 href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -29,31 +29,31 @@
                 <template #activator="{ props: activatorProps }">
                   <v-img
                     v-bind="activatorProps"
-                    alt="Arduino UNO R4"
+                    alt="Arduino UNO R4 WiFi"
                     max-height="200px"
-                    src="/images/uno-r4.svg"
+                    src="/images/uno-r4-wifi.svg"
                     style="cursor: pointer;"
                   />
 
                 </template>
 
                 <template #default="{ isActive }">
-                  <v-card title="Arduino UNO R4 Board">
+                  <v-card title="Arduino UNO R4 WiFi">
                     <v-card-text class="text-center text-caption">
-                      <v-img v-bind="activatorProps" alt="Arduino UNO R4" max-height="400px" src="/images/uno-r4.svg" />
+                      <v-img v-bind="activatorProps" alt="Arduino UNO R4 WiFi" max-height="400px" src="/images/uno-r4-wifi.svg" />
                       <p><a
                         href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
                         rel="noopener noreferrer"
                         target="_blank"
-                      >Arduino Uno R4 Board</a> by <a
-                        href="https://docs.arduino.cc/"
+                      >Arduino Uno R4 WiFi</a> by <a
+                        href="https://arduino.cc/"
                         rel="noopener noreferrer"
                         target="_blank"
                       >Arduino</a> is licensed under <a
-                        href="https://creativecommons.org/licenses/by-sa/4.0/"
+                        href="hhttps://creativecommons.org/licenses/by-sa/3.0/legalcode"
                         rel="noopener noreferrer"
                         target="_blank"
-                      >CC-BY-SA 4.0</a>.</p>
+                      >CC-BY-SA 3.0</a>.</p>
                     </v-card-text>
 
                     <template #actions>
@@ -72,15 +72,15 @@
                 href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
                 rel="noopener noreferrer"
                 target="_blank"
-              >Arduino Uno R4 Board</a> by <a
-                href="https://docs.arduino.cc/"
+              >Arduino Uno R4 WiFi</a> by <a
+                href="https://arduino.cc/"
                 rel="noopener noreferrer"
                 target="_blank"
               >Arduino</a> is licensed under <a
-                href="https://creativecommons.org/licenses/by-sa/4.0/"
+                href="https://creativecommons.org/licenses/by-sa/3.0/legalcode"
                 rel="noopener noreferrer"
                 target="_blank"
-              >CC-BY-SA 4.0</a>.</p>
+              >CC-BY-SA 3.0</a>.</p>
             </v-card-text>
           </v-card>
         </v-col>
@@ -108,17 +108,17 @@
           >
 
             <v-card-text>
-              <p>The source code of the Arduino UNO R4 firmware is available below:</p>
+              <p>The source code of the Arduino UNO R4 WiFi firmware is available below:</p>
             </v-card-text>
 
             <v-card-text class="text-center">
               <v-btn
-                aria-label="Download source code for Arduino UNO R4"
+                aria-label="Download source code for Arduino UNO R4 WiFi"
                 color="primary"
                 download
                 href="/downloads/modbus_led_matrix.ino"
                 prepend-icon="mdi-download"
-                title="Download source code for Arduino UNO R4"
+                title="Download source code for Arduino UNO R4 WiFi"
               >
                 Download Source
               </v-btn>
@@ -134,7 +134,7 @@
             variant="tonal"
           >
             <v-card-text>
-              <p>You can connect to the Arduino UNO R4 through its USB port.</p>
+              <p>You can connect to the Arduino UNO R4 WiFi through its USB port.</p>
 
               <p>Alternatively, you may use the onboard UART (pins D0 and D1), for example, with a TTL to RS-485 converter and a USB RS-485 device.</p>
 
