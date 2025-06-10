@@ -45,7 +45,7 @@
                         href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
                         rel="noopener noreferrer"
                         target="_blank"
-                      >Arduino Uno R4 WiFi</a> by <a
+                      >Arduino UNO R4 WiFi</a> by <a
                         href="https://arduino.cc/"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -72,7 +72,7 @@
                 href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
                 rel="noopener noreferrer"
                 target="_blank"
-              >Arduino Uno R4 WiFi</a> by <a
+              >Arduino UNO R4 WiFi</a> by <a
                 href="https://arduino.cc/"
                 rel="noopener noreferrer"
                 target="_blank"
