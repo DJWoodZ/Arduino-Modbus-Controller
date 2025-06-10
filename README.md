@@ -9,7 +9,7 @@ A web-based interface that enables you to control the 12x8 LED matrix on an Ardu
 
 ## 💿 Install
 
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
+Set up the project using your preferred package manager. Use the `install` command to install the dependencies:
 
 ### NPM Example
 
@@ -33,7 +33,7 @@ npm run dev
 
 ### Building for Production
 
-To build your project for production, use:
+To build the project for production, use:
 
 #### NPM Example
 
