@@ -44,7 +44,10 @@
         </template>
 
         <template #default="{ isActive }">
-          <v-card title="Legal Information">
+          <v-card
+            prepend-icon="mdi-script-outline"
+            title="Legal Information"
+          >
             <v-card-text>
               <p>&copy; {{ (new Date()).getFullYear() }} DJ WoodZ</p>
             </v-card-text>
@@ -101,7 +104,7 @@
 </script>
 
 <style scoped lang="scss">
-:deep(.v-icon), .v-footer a  {
+.v-footer :deep(.v-icon), .v-footer a  {
   color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity));
   text-decoration: none;
   transition: .2s ease-in-out;
