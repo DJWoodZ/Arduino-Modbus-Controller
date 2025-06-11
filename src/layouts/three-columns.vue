@@ -110,10 +110,8 @@
 
             <v-card-text>
               <p>The source code of the Arduino UNO R4 WiFi firmware is available below:</p>
-            </v-card-text>
 
-            <v-card-text class="text-center">
-              <v-btn
+              <p class="text-center"><v-btn
                 aria-label="Download source code for Arduino UNO R4 WiFi"
                 color="primary"
                 download
@@ -122,7 +120,7 @@
                 title="Download source code for Arduino UNO R4 WiFi"
               >
                 Download Source
-              </v-btn>
+              </v-btn></p>
             </v-card-text>
 
 
@@ -137,9 +135,15 @@
             <v-card-text>
               <p>You can connect to the Arduino UNO R4 WiFi through its USB port.</p>
 
-              <p>Alternatively, you may use the onboard UART (pins D0 and D1), for example, with a TTL to RS-485 converter and a USB RS-485 device.</p>
+              <p>Alternatively, you may use the onboard UART (pins D0 and D1), for example, with a TTL to RS-485 converter* and a USB RS-485 device.</p>
 
               <p>Uncheck 'Arduino Devices Only' to see all serial ports.</p>
+
+              <p class="text-caption">* If your TTL converter utilises Driver Enable (DE) and Receiver Enable (RE) pins, you can configure them via the <a
+                href="https://github.com/CMB27/ModbusRTUSlave?tab=readme-ov-file#methods"
+                rel="noopener noreferrer"
+                target="_blank"
+              >ModbusRTUSlave()</a> constructor.</p>
             </v-card-text>
           </v-card>
         </v-col>
