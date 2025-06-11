@@ -27,14 +27,15 @@
 
               <v-dialog max-width="400" min-height="140" scrollable>
                 <template #activator="{ props: activatorProps }">
-                  <v-img
-                    v-bind="activatorProps"
-                    alt="Arduino UNO R4 WiFi"
-                    max-height="200px"
-                    src="/images/uno-r4-wifi.svg"
-                    style="cursor: pointer;"
-                  />
-
+                  <v-row dense justify="center">
+                    <v-col cols="auto"><v-img
+                      v-bind="activatorProps"
+                      alt="Arduino UNO R4 WiFi"
+                      src="/images/uno-r4-wifi.svg"
+                      style="cursor: pointer;"
+                      width="150"
+                    /></v-col>
+                  </v-row>
                 </template>
 
                 <template #default="{ isActive }">
