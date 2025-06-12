@@ -29,7 +29,10 @@
  * Dependencies:
  *   ModbusRTUSlave by C. M. Bulliner: https://github.com/CMB27/ModbusRTUSlave
  *
- * Arduino Modbus Controller Firmware v1.1 (8 June 2025)
+ * Arduino Modbus Controller Firmware v1.2 (12 June 2025)
+ * 
+ * v1.2 (12 June 2025):
+ * - Defined BAUDERATE and SLAVE_ID
  * 
  * v1.1 (8 June 2025):
  * - Removed unused coils array
@@ -45,6 +48,8 @@ ModbusRTUSlave modbus(Serial);
 ModbusRTUSlave modbus1(Serial1);
 ArduinoLEDMatrix matrix;
 
+#define BAUDERATE 9600
+#define SLAVE_ID 1
 #define ROWS 12
 #define COLS 8
 #define REGISTERS ROWS / 2
@@ -98,12 +103,12 @@ void setup() {
   matrix.begin();
 
   modbus.configureHoldingRegisters(holdingRegisters, REGISTERS);
-  Serial.begin(9600);
-  modbus.begin(1, 9600);
+  Serial.begin(BAUDERATE);
+  modbus.begin(SLAVE_ID, BAUDERATE);
 
   modbus1.configureHoldingRegisters(holdingRegisters, REGISTERS);
-  Serial1.begin(9600);
-  modbus1.begin(1, 9600);
+  Serial1.begin(BAUDERATE);
+  modbus1.begin(SLAVE_ID, BAUDERATE);
 }
 
 void loop() {
