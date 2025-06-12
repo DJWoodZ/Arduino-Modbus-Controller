@@ -192,14 +192,14 @@
 
             <v-alert
               v-if="logs.length > 0"
-              class="mb-3 log-text"
+              class="log-text"
               :color="isDark ? 'light-green-accent-4' : 'light-green-darken-4'"
               density="compact"
               variant="tonal"
             >
               <p v-for="(log, index) in logs" :key="index" class="mb-0">{{ log }}</p>
             </v-alert>
-            <v-alert v-else class="mb-3" density="compact">
+            <v-alert v-else density="compact">
               <v-skeleton-loader
                 boilerplate
                 class="pt-0"
