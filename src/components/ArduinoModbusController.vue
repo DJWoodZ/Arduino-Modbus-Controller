@@ -1,5 +1,14 @@
 <template>
-  <v-container v-if="$api.isSupported()">
+  <v-container>
+    <v-row v-if="!supported" dense justify="center">
+      <v-alert
+        density="compact"
+        type="error"
+        variant="outlined">Sorry, your browser does not support the Web Serial API. Please use a
+        <a class="text-error" href="https://caniuse.com/web-serial" rel="noopener noreferrer"
+        target="_blank">compatible browser</a>.</v-alert>
+    </v-row>
+
     <v-row dense justify="center">
       <v-col
         class="pa-2"
@@ -16,7 +25,7 @@
             <v-btn
               :color="leds[rowIndex -1][colIndex -1] ? 'primary' : null"
               density="compact"
-              :disabled="!connected"
+              :disabled="!supported || !connected"
               :icon="leds[rowIndex -1][colIndex -1] ? 'mdi-led-on' : 'mdi-led-outline'"
               @click="onButtonClick(rowIndex - 1, colIndex -1)"
             />
@@ -24,7 +33,6 @@
         </v-row>
       </v-col>
     </v-row>
-
 
     <v-row dense justify="center">
       <!-- Left col -->
@@ -42,7 +50,7 @@
               aria-label="List Arduino Devices Only"
               color="success"
               density="compact"
-              :disabled="connected"
+              :disabled="!supported || connected"
               flat
               hide-details
               label="Arduino Devices Only"
@@ -53,8 +61,8 @@
           <v-col class="text-end" cols="auto">
             <v-btn
               aria-label="Connect to device"
-              :color="!connected ? 'success' : 'grey-darken-1'"
-              :disabled="connected"
+              :color="supported && !connected ? 'success' : 'grey-darken-1'"
+              :disabled="!supported || connected"
               prepend-icon="mdi-power-plug-outline"
               title="Connect to device"
               @click="connectToDevice"
@@ -66,8 +74,8 @@
           <v-col class="text-end" cols="auto">
             <v-btn
               aria-label="Disconnect from device"
-              :color="connected ? 'error' : 'grey-darken-1'"
-              :disabled="!connected"
+              :color="supported && connected ? 'error' : 'grey-darken-1'"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-power-plug-off-outline"
               title="Disconnect from device"
               @click="disconnectFromDevice"
@@ -81,8 +89,8 @@
           <v-col class="text-end" cols="auto">
             <v-btn
               aria-label="Turn all LEDs on"
-              :color="connected ? 'primary' : 'grey-darken-1'"
-              :disabled="!connected"
+              :color="supported && connected ? 'primary' : 'grey-darken-1'"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-led-on"
               title="Turn all LEDs on"
               @click="() => setAllLEDs (true, true)"
@@ -95,7 +103,7 @@
             <v-btn
               aria-label="Turn all LEDs off"
               color="grey-darken-1"
-              :disabled="!connected"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-led-outline"
               title="Turn all LEDs off"
               @click="() => setAllLEDs (false, true)"
@@ -108,7 +116,7 @@
             <v-btn
               aria-label="Invert all LEDs"
               color="grey-darken-1"
-              :disabled="!connected"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-invert-colors"
               title="Invert all LEDs"
               @click="() => invertAllLEDs (true)"
@@ -121,7 +129,7 @@
             <v-btn
               aria-label="Randomise all LEDs"
               color="grey-darken-1"
-              :disabled="!connected"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-dice-3"
               title="Randomise all LEDs"
               @click="() => randomiseAllLEDs (true)"
@@ -136,7 +144,7 @@
             <v-btn
               aria-label="Read current state"
               color="grey-darken-1"
-              :disabled="!connected"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-download"
               title="Read current state"
               @click="requestState"
@@ -149,7 +157,7 @@
             <v-btn
               aria-label="Write current state"
               color="grey-darken-1"
-              :disabled="!connected"
+              :disabled="!supported || !connected"
               prepend-icon="mdi-upload"
               title="Write current state"
               @click="writeLEDValues"
@@ -204,10 +212,6 @@
       </v-col>
     </v-row>
   </v-container>
-
-  <v-alert v-else density="compact" type="error" variant="outlined">Sorry, your browser does not support the Web Serial API. Please use a
-    <a class="text-error" href="https://caniuse.com/web-serial" rel="noopener noreferrer" target="_blank">compatible browser</a>.</v-alert>
-
 </template>
 
 <script setup>
@@ -229,6 +233,8 @@
 
   const arduinoDevicesOnly = ref(true);
   const connected = ref(false);
+  const supported = ref($api.isSupported());
+
   const leds = ref([
     [false, false, false, false, false, false, false, false],
     [false, false, false, false, false, false, false, false],
