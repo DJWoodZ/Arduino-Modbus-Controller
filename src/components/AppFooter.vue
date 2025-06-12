@@ -64,9 +64,9 @@
               <v-spacer />
 
               <v-btn
-                text="Close"
+                variant="text"
                 @click="isActive.value = false"
-              />
+              >Close</v-btn>
             </v-card-actions>
           </v-card>
         </template>

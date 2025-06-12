@@ -60,9 +60,9 @@
                     <template #actions>
                       <v-btn
                         class="ml-auto"
-                        text="Close"
+                        variant="text"
                         @click="isActive.value = false"
-                      />
+                      >Close</v-btn>
                     </template>
                   </v-card>
                 </template>
