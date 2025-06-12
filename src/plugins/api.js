@@ -116,12 +116,12 @@ function processModbusResponse (responseBuffer, expectedSlaveId) {
 
       // Response structure for function 0x10:
       // [slaveId, functionCode, byteCount, [dataHi, dataLo, ...], CRCLo, CRCHi]
-      // Usually 8 bytes
-      if (buffer.length !== byteCount + 5) {
+      // Should be 5 bytes + byteCount
+      if (buffer.length !== 5 + byteCount) {
         throw new Error('Unexpected response length for function 0x03');
       }
 
-      // Verify CRC (assumed you have a verifyCRC function)
+      // Verify CRC
       if (!verifyCRC(buffer)) {
         throw new Error('CRC check failed');
       }
@@ -145,12 +145,12 @@ function processModbusResponse (responseBuffer, expectedSlaveId) {
     {
       // Response structure for function 0x10:
       // [slaveId, functionCode, startAddrHi, startAddrLo, quantityHi, quantityLo, CRCLo, CRCHi]
-      // Usually 8 bytes
+      // Should be 8 bytes
       if (buffer.length !== 8) {
         throw new Error('Unexpected response length for function 0x10');
       }
 
-      // Verify CRC (assumed you have a verifyCRC function)
+      // Verify CRC
       if (!verifyCRC(buffer)) {
         throw new Error('CRC check failed');
       }
