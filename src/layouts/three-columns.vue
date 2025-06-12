@@ -41,7 +41,7 @@
                 <template #default="{ isActive }">
                   <v-card title="Arduino UNO R4 WiFi">
                     <v-card-text class="text-center text-caption">
-                      <v-img v-bind="activatorProps" alt="Arduino UNO R4 WiFi" max-height="400px" src="/images/uno-r4-wifi.svg" />
+                      <v-img alt="Arduino UNO R4 WiFi" max-height="400px" src="/images/uno-r4-wifi.svg" />
                       <p><a
                         href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
                         rel="noopener noreferrer"
