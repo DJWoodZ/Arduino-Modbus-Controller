@@ -51,7 +51,6 @@
               color="success"
               density="compact"
               :disabled="!supported || connected"
-              flat
               hide-details
               label="Arduino Devices Only"
               title="List Arduino Devices Only"
@@ -478,7 +477,11 @@
   });
 </script>
 
-<style scoped>
+<style style="scss" scoped>
+.v-switch {
+  height: 36px;
+}
+
 .log-text {
   font-size: 0.75rem; /* smaller font size */
   font-family: monospace;
