@@ -40,21 +40,9 @@
 
                 <template #default="{ isActive }">
                   <v-card title="Arduino UNO R4 WiFi">
-                    <v-card-text class="text-center text-caption">
+                    <v-card-text>
                       <v-img alt="Arduino UNO R4 WiFi" max-height="400px" src="/images/uno-r4-wifi.svg" />
-                      <p><a
-                        href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >Arduino UNO R4 WiFi</a> by <a
-                        href="https://arduino.cc/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >Arduino</a> is licensed under <a
-                        href="hhttps://creativecommons.org/licenses/by-sa/3.0/legalcode"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >CC-BY-SA 3.0</a>.</p>
+                      <ArduinoUNOR4Image />
                     </v-card-text>
 
                     <template #actions>
@@ -68,20 +56,7 @@
                 </template>
               </v-dialog>
 
-
-              <p class="text-center text-caption"><a
-                href="https://docs.arduino.cc/hardware/uno-r4-wifi/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >Arduino UNO R4 WiFi</a> by <a
-                href="https://arduino.cc/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >Arduino</a> is licensed under <a
-                href="https://creativecommons.org/licenses/by-sa/3.0/legalcode"
-                rel="noopener noreferrer"
-                target="_blank"
-              >CC-BY-SA 3.0</a>.</p>
+              <ArduinoUNOR4Image />
             </v-card-text>
           </v-card>
         </v-col>

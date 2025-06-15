@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     ArduinoModbusController: typeof import('./src/components/ArduinoModbusController.vue')['default']
+    ArduinoUNOR4Image: typeof import('./src/components/ArduinoUNOR4Image.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
