@@ -6,7 +6,7 @@ const baudRate = 9600;
 
 export const api = {
   // CRC-16 (Modbus) calculation
-  modbusCRC16: (buffer) => {
+  modbusCRC16: buffer => {
     let crc = 0xFFFF;
 
     for (let pos = 0; pos < buffer.length; pos++) {
@@ -25,7 +25,7 @@ export const api = {
   },
 
   // Function to verify CRC
-  verifyCRC: (buffer) => {
+  verifyCRC: buffer => {
     const dataWithoutCRC = buffer.slice(0, -2);
     const receivedCRC = (buffer[buffer.length - 1] << 8) | buffer[buffer.length - 2];
     const calculatedCRC = api.modbusCRC16(dataWithoutCRC);
@@ -36,11 +36,11 @@ export const api = {
     return 'serial' in navigator;
   },
 
-  connectToDevice: async (arduinoDevicesOnly) => {
+  connectToDevice: async arduinoDevicesOnly => {
     return await navigator.serial.requestPort(arduinoDevicesOnly ? { filters } : undefined);
   },
 
-  openPort: async (port) => {
+  openPort: async port => {
     return await port.open({ baudRate });
   },
 

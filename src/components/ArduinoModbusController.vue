@@ -4,9 +4,14 @@
       <v-alert
         density="compact"
         type="error"
-        variant="outlined">Sorry, your browser does not support the Web Serial API. Please use a
-        <a class="text-error" href="https://caniuse.com/web-serial" rel="noopener noreferrer"
-        target="_blank">compatible browser</a>.</v-alert>
+        variant="outlined"
+      >Sorry, your browser does not support the Web Serial API. Please use a
+        <a
+          class="text-error"
+          href="https://caniuse.com/web-serial"
+          rel="noopener noreferrer"
+          target="_blank"
+        >compatible browser</a>.</v-alert>
     </v-row>
 
     <v-row dense justify="center">

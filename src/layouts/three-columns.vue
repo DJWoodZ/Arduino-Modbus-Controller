@@ -13,7 +13,6 @@
             variant="tonal"
           >
             <v-card-text>
-
               <p>This web-based interface enables you to control the 12x8 LED matrix on an <a
                 href="https://store.arduino.cc/pages/uno-r4"
                 rel="noopener noreferrer"
@@ -23,7 +22,6 @@
                 rel="noopener noreferrer"
                 target="_blank"
               >Web Serial API</a>.</p>
-
 
               <v-dialog max-width="400" min-height="140" scrollable>
                 <template #activator="{ props: activatorProps }">

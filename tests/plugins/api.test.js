@@ -55,7 +55,7 @@ describe('verifyCRC', () => {
     const bufferWithCRC = new Uint8Array([...data, crc & 0xFF, (crc >> 8) & 0xFF]);
     expect(verifyCRC(bufferWithCRC)).toBe(true);
   });
-  
+
   it('should detect a buffer with an incorrect CRC', () => {
     const data = Uint8Array.from([0x01, 0x04, 0x00, 0x00, 0x00, 0x02]);
     // Append intentionally incorrect CRC
@@ -69,20 +69,20 @@ describe('isSupported', () => {
     // Mock navigator.serial
     const originalSerial = navigator.serial;
     navigator.serial = {};
-    
+
     expect(isSupported()).toBe(true);
-    
+
     // Restore original navigator.serial
     navigator.serial = originalSerial;
   });
-  
+
   it('should return false when navigator.serial does not exist', () => {
     // Temporarily delete navigator.serial
     const originalSerial = (navigator).serial;
     delete navigator.serial;
-    
+
     expect(isSupported()).toBe(false);
-    
+
     // Restore original navigator.serial
     navigator.serial = originalSerial;
   });
@@ -279,9 +279,9 @@ describe('processModbusResponse', () => {
     const spy = vi.spyOn(api, 'verifyCRC').mockReturnValue(true);
 
     const responseBuffer = [
-      1,    // Slave ID
+      1, // Slave ID
       0x03, // Function code
-      4,    // Byte count
+      4, // Byte count
       0x00, 0x0A, // register value 10
       0x00, 0x14, // register value 20
       0xDA, 0x3E, // CRC bytes
@@ -295,9 +295,9 @@ describe('processModbusResponse', () => {
 
   it('should process a valid Read Holding Registers response (function 0x03)', () => {
     const responseBuffer = [
-      1,    // Slave ID
+      1, // Slave ID
       0x03, // Function code
-      4,    // Byte count
+      4, // Byte count
       0x00, 0x0A, // register value 10
       0x00, 0x14, // register value 20
       0xDA, 0x3E, // CRC bytes
@@ -331,7 +331,7 @@ describe('processModbusResponse', () => {
 
   it('should throw an error if slave ID does not match for function 0x03', () => {
     const responseBuffer = [
-      2,    // Incorrect Slave ID
+      2, // Incorrect Slave ID
       0x03,
       4,
       0x00, 0x0A,
@@ -345,11 +345,11 @@ describe('processModbusResponse', () => {
     const spy = vi.spyOn(api, 'verifyCRC').mockReturnValue(true);
 
     const responseBuffer = [
-      1,    // Slave ID
+      1, // Slave ID
       0x10, // Function code
       0x00, 0x10, // Start address high, low (16)
       0x00, 0x05, // Quantity high, low (5)
-      0x01, 0xCF // CRC bytes
+      0x01, 0xCF, // CRC bytes
     ];
 
     processModbusResponse(responseBuffer, 1);
@@ -360,11 +360,11 @@ describe('processModbusResponse', () => {
 
   it('should process a valid Write Multiple Registers response (function 0x10)', () => {
     const responseBuffer = [
-      1,    // Slave ID
+      1, // Slave ID
       0x10, // Function code
       0x00, 0x10, // Start address high, low (16)
       0x00, 0x05, // Quantity high, low (5)
-      0x01, 0xCF // CRC bytes
+      0x01, 0xCF, // CRC bytes
     ];
     const result = processModbusResponse(responseBuffer, 1);
     expect(result).toEqual({ startAddress: 16, quantity: 5 });
@@ -385,18 +385,18 @@ describe('processModbusResponse', () => {
       0x10,
       0x00, 0x10,
       0x00, 0x05,
-      0x00, 0x00 // Invalid CRC bytes
+      0x00, 0x00, // Invalid CRC bytes
     ];
     expect(() => processModbusResponse(responseBuffer, 1)).toThrow('CRC check failed');
   });
 
   it('should throw an error if slave ID does not match for function 0x10', () => {
     const responseBuffer = [
-      2,    // Incorrect Slave ID
+      2, // Incorrect Slave ID
       0x10,
       0x00, 0x10,
-      0x00, 0x05, 
-      0x01, 0xFC
+      0x00, 0x05,
+      0x01, 0xFC,
     ];
     expect(() => processModbusResponse(responseBuffer, 1)).toThrow('Unexpected slave ID: 2');
   });
@@ -407,7 +407,7 @@ describe('processModbusResponse', () => {
       0x99, // Unsupported function code
       0x00,
       0x00,
-      0x00
+      0x00,
     ];
     expect(() => processModbusResponse(responseBuffer, 1)).toThrow('Unsupported function code: 0x99');
   });
