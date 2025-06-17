@@ -77,7 +77,6 @@
     "watch": true,
     "watchEffect": true,
     "watchPostEffect": true,
-    "watchSyncEffect": true,
-    "__COMMIT_HASH__": "readonly"
+    "watchSyncEffect": true
   }
 }

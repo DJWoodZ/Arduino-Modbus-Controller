@@ -89,7 +89,7 @@
 <script setup>
   import { useDisplay } from 'vuetify';
 
-  const { mdAndUp } = useDisplay()
+  const { mdAndUp } = useDisplay();
 
   const items = [
     {
@@ -98,7 +98,7 @@
       href: 'https://github.com/DJWoodZ/Arduino-Modbus-Controller',
       size: 24,
     },
-  ]
+  ];
 
   const build = __COMMIT_HASH__ ;
 </script>

@@ -29,7 +29,7 @@ export const useMessagesStore = defineStore('messages', () => {
     const obj = {
       text,
       color,
-    }
+    };
 
     // Check if the same message already exists in the queue before adding it again
     const exists = queue.value.some(o => isDeepEqual(o, obj));
@@ -41,5 +41,5 @@ export const useMessagesStore = defineStore('messages', () => {
     }
   }
 
-  return { queue, add }
-})
+  return { queue, add };
+});

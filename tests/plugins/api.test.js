@@ -6,7 +6,7 @@ const { modbusCRC16, verifyCRC, isSupported, connectToDevice, openPort, createRe
 
 afterEach(() => {
   vi.restoreAllMocks();
-})
+});
 
 describe('modbusCRC16', () => {
   it('should calculate the CRC of an empty buffer', () => {

@@ -6,14 +6,14 @@
 
 // Plugins
 import api from './api.js';
-import vuetify from './vuetify'
-import pinia from '@/stores'
-import router from '@/router'
+import vuetify from './vuetify';
+import pinia from '@/stores';
+import router from '@/router';
 
 export function registerPlugins (app) {
   app
     .use(api)
     .use(vuetify)
     .use(router)
-    .use(pinia)
+    .use(pinia);
 }

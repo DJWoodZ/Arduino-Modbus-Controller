@@ -5,8 +5,8 @@
  */
 
 // Styles
-import '@mdi/font/css/materialdesignicons.css'
-import 'vuetify/styles'
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
 
 import github from '@/assets/github.svg';
 
@@ -43,4 +43,4 @@ export default createVuetify({
     },
     defaultTheme: (prefersDark ? 'dark' : 'light'),
   },
-})
+});

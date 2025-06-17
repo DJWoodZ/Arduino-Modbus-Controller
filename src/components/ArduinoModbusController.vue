@@ -223,7 +223,7 @@
   import { useTheme } from 'vuetify';
 
   const theme = useTheme();
-  const isDark = computed(() => theme.global.name.value === 'dark')
+  const isDark = computed(() => theme.global.name.value === 'dark');
 
   const messages = useMessagesStore();
 
