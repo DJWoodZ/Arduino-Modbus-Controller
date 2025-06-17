@@ -219,7 +219,6 @@
 </template>
 
 <script setup>
-  import { inject, ref } from 'vue';
   import { useMessagesStore } from '@/stores/messages';
   import { useTheme } from 'vuetify';
 
