@@ -8,7 +8,7 @@
     rel="noopener noreferrer"
     target="_blank"
   >Arduino</a>, used under <a
-    href="hhttps://creativecommons.org/licenses/by-sa/3.0/legalcode"
+    href="https://creativecommons.org/licenses/by-sa/3.0/legalcode"
     rel="noopener noreferrer"
     target="_blank"
   >CC-BY-SA 3.0</a> / Rotated from original.</p>
